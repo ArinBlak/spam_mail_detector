@@ -25,6 +25,9 @@ with open("sample_input.xlsx", "rb") as file:
 
 uploaded_file = st.file_uploader("Upload an Excel file", type = ['xlsx'])
 
+st.markdown("---")
+st.markdown("🔗 [View Project on GitHub](https://github.com/ArinBlak/spam_mail_detector)")
+
 if uploaded_file is not None:
     df = pd.read_excel(uploaded_file)
     df.columns = [str(col) for col in df.columns]
