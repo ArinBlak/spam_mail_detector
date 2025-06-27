@@ -39,9 +39,6 @@ if uploaded_file is not None:
         else:
             st.error("File doesnt contain the correct feature set")
             st.stop()
-
-    st.write("📋 Prediction Results:")
-    st.dataframe(df[["Prediction"]])
     
     st.write("Uploaded data preview")
     st.dataframe(df.head())
