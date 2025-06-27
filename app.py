@@ -49,8 +49,10 @@ if uploaded_file is not None:
     try:
         predictions = pipeline.predict(df)
         df["Prediction"] = ["Spam" if p == 1 else "Not Spam" for p in predictions]
+        
         st.success("Prediction completed!")
-        st.dataframe(df)
+        st.write("📋 Prediction Results:")
+        st.dataframe(df[["Prediction"]])
         
         st.download_button("Download Predictions", df.to_csv(index = False), file_name="Predictions.csv")
     except Exception as e:
