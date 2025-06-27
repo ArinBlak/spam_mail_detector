@@ -1,4 +1,4 @@
-Here's the tech stack consisting of all the 
+
 streamlit
 pandas
 numpy
